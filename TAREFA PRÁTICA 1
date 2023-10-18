@@ -1,0 +1,113 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		
+    	int id;
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Qual é a idade?");
+        id = ler.nextInt();
+        
+        if(id >= 18 && id < 60){
+            System.out.println("Adulto");
+        } 
+        
+        else if(id >= 60){ 
+            System.out.println("Idoso");
+        } 
+        else{
+            System.out.println("menor de idade");
+            
+        }
+    
+	}
+	
+}
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		
+    	int n, resul = 0, v;
+    	Scanner ler = new Scanner(System.in);
+    	System.out.println("Digite um numero");
+    	
+    	n = ler.nextInt();
+    	for(int i = 0;i < n; i ++) 
+    	{   
+    	    v = i ;
+    	 
+    	 if ((v % 2) == 1 )
+    	 {
+    	   resul = resul + v;
+    	 System.out.println(v + "+");
+        }
+    	}
+    	System.out.println(resul);
+    
+	}
+	
+}
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		
+    	String vetor[] = new String[5];
+    	String nome, veri;
+    	Scanner ler = new Scanner(System.in);
+    	for(int i = 0; i < 5; i++){
+    	    
+    	System.out.println("Digite nome" + (i+1));
+    	nome = ler.nextLine();
+    	vetor[i] = nome;
+    	}
+    	System.out.println("digite nome de verificação");
+        veri = ler.nextLine();
+        
+        for(int i = 0; i < 5; i++)
+    	    {
+    	    if(vetor[i].equals(veri)){
+    	        
+    	        System.out.println("nome igual encontrado");
+    	    }
+    	 }
+	}
+	
+}
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+    
+        String Senha = "Senha", veri;
+    	boolean V  = true;
+    	Scanner ler = new Scanner(System.in);
+    	while(V == true){
+    	    
+    	System.out.println("Digite Senha");
+    	veri = ler.nextLine();
+        if(veri.equals(Senha)){
+        
+        System.out.println("Senha Correta");
+            V = false;
+         }else{
+             
+             System.out.println("Senha incorreta tente novamente");
+             
+         }
+    	}
+	}
+}
+
+
+
+
+
+
