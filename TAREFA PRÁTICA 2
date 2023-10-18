@@ -1,0 +1,398 @@
+1.    Array de Números Pares:
+Gere um array de 10 números aleatórios. Use um loop para imprimir apenas os números pares.
+
+
+import java.util.Random;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+		int vetor[] = new int[10];
+		
+		for(int i=0; i < 10; i ++)
+        {
+         
+         vetor[i] = num.nextInt(10);
+         if((vetor[i] % 2) == 0)
+         {
+         System.out.println(vetor[i]);   
+        }
+        }
+	}
+}
+
+
+
+
+2.    Adivinhe o Número:
+Gere um número aleatório entre 1 e 100 e peça ao usuário para adivinhá-lo. Dê dicas se o palpite estiver alto ou baixo.
+
+
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+		Scanner ler = new Scanner(System.in);
+		int n[] = new int[1];
+		int guess = 200;
+		
+		n[0] = num.nextInt(100);
+		
+		while(guess != n[0])
+		{
+		    System.out.println("digite um número de 0 a 100 ");
+		    guess = ler.nextInt();
+		    
+		    if(guess == n[0])
+		    {
+		     System.out.println("Você acertou");
+		    }
+		    else if(guess + 10 > n[0] && guess < n[0])
+		    {
+		     System.out.println("muito perto chute mais alto");
+		    }
+		     else if(guess - 10 < n[0]  && guess > n[0]  )
+		    {
+		     System.out.println("muito perto chute mais baixo");
+		    }
+		    else if(guess > n[0])
+		    {
+		     System.out.println("chute mais baixo");
+		    }
+		    else if(guess + 10 < n[0])
+		    {
+		     System.out.println("chute mais alto");
+		    }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+3.    Média de Valores:
+Crie um array com 20 números aleatórios. Calcule e imprima a média desses números
+
+
+import java.util.Random;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+
+
+		int vetor[] = new int[20];
+		int n = 0; 
+		
+		for(int i = 0; i < 20; i ++) 
+		{
+		    
+		 vetor[i] = num.nextInt(100);   
+		n = n + vetor[i];
+		}
+		System.out.println("a sua media é: " + (n / 20));
+	}
+}
+
+
+
+
+
+
+
+
+4.    Número Máximo e Mínimo:
+Gere um array de 15 números aleatórios e, em seguida, determine e imprima o maior e o menor valor.
+
+
+import java.util.Arrays;
+import java.util.Random;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+
+
+		int vetor[] = new int[15];
+		
+		
+		for(int i = 0; i < 15; i ++) 
+		{
+		    
+		 vetor[i] = num.nextInt(100);   
+	
+		}
+		Arrays.sort(vetor);
+		
+		System.out.println("valor mais alto: " + vetor[14] + "\nvalor mais baixo: " + vetor[0]);
+		
+	}
+}
+
+
+
+
+5.    Contando Ímpares:
+Gere um array com 30 números aleatórios. Use um loop para contar quantos desses números são ímpares.
+
+
+
+
+import java.util.Arrays;
+import java.util.Random;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+
+
+		int vetor[] = new int[30];
+		int n = 0;
+		
+		for(int i = 0; i < 30; i ++) 
+		{
+		    vetor[i] = num.nextInt(100);   
+	    
+    	    if ((vetor[i] % 2) != 0)
+    	    {
+    	        n++;
+    		}
+		
+    	}
+		System.out.println("A quantidade de numeros pares são: " + n);
+    }
+}
+
+
+6.    Reversão de Array:
+Crie um array com 10 números aleatórios e, em seguida, imprima esse array em ordem reversa.
+
+
+import java.util.Random;
+
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+
+
+
+
+		int vetor[] = new int[10];
+		int n = 0;
+		
+		System.out.print("Vetor ordem normal : " );
+		
+		for(int i = 0; i < 10; i ++) 
+		{
+		    vetor[i] = num.nextInt(100);   
+	    
+		System.out.print( vetor[i]+ " ");
+    	
+    	}
+    	
+        System.out.print("\nVetor ordem reverse: ");
+        
+		for(int i = 9; i >= 0; i --) 
+		{   
+	    System.out.print(vetor[i] + " ");
+    	
+    	}
+    }
+}
+
+
+	
+
+
+7.    Frequência de Números:
+Gere um array com 50 números aleatórios entre 1 e 10. Conte e imprima quantas vezes cada número aparece no array.	
+
+
+
+
+import java.util.Random;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+		int vetor[] = new int[50];
+		int cont[] = new int[10];
+		int n = 0;
+		
+		for(int i = 0; i < 50; i ++) 
+		{
+		    vetor[i] = num.nextInt(10) + 1;   
+    	}
+        
+		for(int i = 0; i < 50; i ++)
+		{   
+    	    for(int j = 0; j < 10; j ++){
+        	    if(vetor[i] == j){
+        	        cont[j] = cont[j] + 1;
+        	    }
+	        } 
+        }
+		for(int i = 0; i < 10; i ++)
+		{   
+	        System.out.println("o numero: " + (i + 1) + " se repete " + cont[i] + " vezes");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+8.    Preenchendo o Array:
+Crie um programa que peça ao usuário para inserir 10 números. Armazene esses números em um array e, em seguida, imprima o valor mais frequente e a sua frequência.
+
+
+import java.util.Random;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		Random num = new Random();
+		int vetor[] = new int[10];
+		int cont[] = new int[10];
+		int n = 0, more, b;
+		
+		for(int i = 0; i < 10; i ++) 
+		{
+		   n = ler.nextInt();
+		   vetor[i] = n;
+    	}
+        
+		for(int i = 0; i < 10; i ++)
+		{   
+    	    for(int j = 0; j < 10; j ++){
+        	    if(vetor[i] == vetor[j]){
+        	        cont[i] = cont[i] + 1;
+        	    }
+	        } 
+        }
+        n = 0; 
+        b = 0;
+		for(int i = 1; i < 10; i ++)
+		{   
+
+
+    	    if(cont[i] > n ){
+    	        n = cont[i];
+    	        b = vetor[i];
+    	    }
+	        
+        }
+        System.out.print("O número mais frequente é " + b + " que aparece " + n + " vezes");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+9.    Busca Linear:
+Gere um array com 25 números aleatórios. Peça ao usuário para inserir um número e, em seguida, verifique se esse número está no array ou não. Informe ao usuário o resultado da busca.
+
+
+import java.util.Random;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		Random num = new Random();
+		int vetor[] = new int[25];
+		int n = 0, j = 0;
+		boolean veri = false;
+		
+		for(int i = 0; i < 25; i ++) 
+		{
+		   vetor[i] = num.nextInt(100);
+    	System.out.print(vetor[i] + " ");
+    	}
+        System.out.println("Um número de 0 a 100");
+        n = ler.nextInt();
+    
+        for(j = 0; j < 25; j++){
+        	    if(vetor[j] == n ){
+        	        System.out.println("Esse número consta no vetor");
+        	        veri = true;
+        	    }
+        }
+        if(veri == false){
+            System.out.println("Esse número não consta no vetor");
+        }
+    }
+}
+
+
+
+
+
+
+10.   Simulação de Jogo de Dados:
+Simule o lançamento de dois dados 100 vezes usando geração de números aleatórios. Conte e imprima quantas vezes a soma dos dois dados resultou em 7.
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Random num = new Random();
+		int dado1, dado2, n = 0;
+	
+		for(int i = 0; i < 100; i ++) 
+		{
+		   dado1 = num.nextInt(6) + 1;
+		   dado2 = num.nextInt(6) + 1;
+		   if((dado1 + dado2) == 7){
+        	      n++;
+        	    }
+    	
+    	}
+        System.out.println("A soma dos dados deram 7, " + n + " vezes");
+       
+    }
+}
+
+
