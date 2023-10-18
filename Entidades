@@ -1,0 +1,12 @@
+| Entidade              | Atributos                                      | Métodos                                  |
+|-----------------------|------------------------------------------------|------------------------------------------|
+| Tablet                | Tamanho, armazenamento, processador            | processar, armazenar dados              |
+| Produto de Limpeza    | Acidez, odor, nome, marca                      | Limapr                                   |
+| Batman                | Inteligência, dinheiro, treinamento, roupa preta| combater o crime, lutar, proteger       |
+| Engenheiro            | Nome, documento, idade, faculdade              | construir edificações e planejá-las     |
+| Barco                 | Tamanho, cor, nome, composição                  | flutuar                                  |
+| Ator                  | Nome, sexo, especialidade                      | atuar                                    |
+| Navegador             | Nome, versão, criador                          | gerenciar                               |
+| Biólogo               | Nome, sexo, documento, faculdade de biologia   | pesquisar, cuidar                       |
+| Bicicleta             | Cor, peso, modelo                              | transporte                               |
+| Cão                   | Raça, tamanho, nome                            | latir, beber água                        |
